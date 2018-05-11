@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ly_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Title"
+            android:textColor="@color/color_black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="10dp"
+            android:background="@color/color_black" />
+
+        <TextView
+            android:id="@+id/tv_Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Content"
+            android:textColor="@color/color_black"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ly_DynamicFileArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_Attach"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ly_BottomModify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_mode_edit_black_24dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_black" />
+
+        <LinearLayout
+            android:id="@+id/ly_BottomDelete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_delete_black_24dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

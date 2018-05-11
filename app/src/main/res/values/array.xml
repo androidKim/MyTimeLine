@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="color_array">
+        <item>A4E6ED</item>
+        <item>17AFCA</item>
+        <item>4D6977</item>
+        <item>205EFF</item>
+        <item>36B7FF</item>
+        <item>FFFFFF</item>
+        <item>626262</item>
+        <item>DC0062</item>
+        <item>F5A33F</item>
+        <item>D3485A</item>
+        <item>7A2E85</item>
+        <item>1B3474</item>
+        <item>FBD22B</item>
+        <item>1B1818</item>
+        <item>CDDC39</item>
+        <item>FF5722</item>
+        <item>795548</item>
+        <item>9E9E9E</item>
+        <item>607D8B</item>
+        <item>9C27B0</item>
+    </array>
+
+</resources>

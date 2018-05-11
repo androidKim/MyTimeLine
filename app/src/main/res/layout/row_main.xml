@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ly_Row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/color_black"
+            android:textSize="13dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Title"
+            android:textColor="@color/color_white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ly_DynamicFileArea"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_Attach"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content"
+            android:textColor="@color/color_white"
+            android:textSize="17dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>
