@@ -2,10 +2,11 @@ package com.midas.mytimeline.ui.act
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.GridLayoutManager
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
@@ -88,8 +89,15 @@ class ActMain : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener
         m_Adapter = MainRvAdapter(this, arrData)
         recyclerView.adapter = m_Adapter;
 
-        val lm = LinearLayoutManager(this)
-        recyclerView.layoutManager = lm
+
+        var nSpanCnt = 3
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE)//landspace mode..
+        {
+            nSpanCnt = 4
+        }
+
+        val pLayoutManager = GridLayoutManager(this, nSpanCnt);
+        recyclerView.layoutManager = pLayoutManager
         recyclerView.setHasFixedSize(true)
 
         //event..

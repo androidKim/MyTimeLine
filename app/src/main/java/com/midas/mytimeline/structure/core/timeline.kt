@@ -50,8 +50,11 @@ class timeline(val seq:String, val title: String, val content:String, val img_pa
 
     //------------------------------------------------------------
     //
-    public fun loadImage(path:String):Bitmap
+    fun loadImage(path:String): Bitmap?
     {
+        if(path == null || path.isEmpty())
+            return null
+
         val pBitmap: Bitmap = BitmapFactory.decodeFile(path);
         return pBitmap
     }
