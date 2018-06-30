@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
@@ -12,8 +13,9 @@ import com.midas.mytimeline.MyApp
 import com.midas.mytimeline.R
 import com.midas.mytimeline.common.Constant
 import com.midas.mytimeline.structure.core.timeline
-import com.midas.mytimeline.ui.adapter.MainAdapter
+import com.midas.mytimeline.ui.adapter.MainRvAdapter
 import kotlinx.android.synthetic.main.act_main.*
+import java.util.*
 
 /*
 main
@@ -26,11 +28,10 @@ class ActMain : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener
     var m_App:MyApp? = null;
     var m_Context:Context? = null;
     var m_RequestManager: RequestManager? = null;
-    var m_Adapter:MainAdapter? = null;
+    var m_Adapter:MainRvAdapter? = null;
     var m_arrData:ArrayList<timeline>? = null;
     /************************* Controller *************************/
     //
-
     /************************* System Fucntion *************************/
     //-------------------------------------------------------------
     //
@@ -84,9 +85,12 @@ class ActMain : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener
     {
         var arrData: ArrayList<timeline> = ArrayList();
         arrData = m_App!!.m_LocalDbCtrl.getAllData();
-        m_Adapter = MainAdapter(this, arrData, m_RequestManager!!)
-        listView.adapter = m_Adapter;
+        m_Adapter = MainRvAdapter(this, arrData)
+        recyclerView.adapter = m_Adapter;
 
+        val lm = LinearLayoutManager(this)
+        recyclerView.layoutManager = lm
+        recyclerView.setHasFixedSize(true)
 
         //event..
         ly_SwipeRefresh.setOnRefreshListener(this)
@@ -109,6 +113,7 @@ class ActMain : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener
     }
     //-------------------------------------------------------------
     //get List From Db
+
 
     //-------------------------------------------------------------
     //
