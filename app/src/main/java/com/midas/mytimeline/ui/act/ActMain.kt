@@ -128,7 +128,7 @@ class ActMain : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener
     fun goWrite()
     {
         val pIntent = Intent(this, ActWrite::class.java)
-        startActivityForResult(pIntent, 0);
+        startActivityForResult(pIntent, 0)
     }
     /************************* Listener *************************/
     //-------------------------------------------------------------
